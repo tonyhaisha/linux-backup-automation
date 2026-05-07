@@ -12,12 +12,7 @@ echo $(date "+%d-%m-%Y") >> $LOG
 
 sudo rsync -avz /home/ashen/ $REMOTE_USER@$REMOTE_HOST:/home/server/backups/$(date +"%F_%H-%M-%S") >> $LOG
 
+echo $?
 
 echo "BACKUP SUCCESSFUL!" >> $LOG
-
-
-
-
-
-
 
