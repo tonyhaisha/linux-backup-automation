@@ -1,0 +1,17 @@
+*.log
+*.pem
+*.key
+*.ppk
+id_rsa
+id_ed25519
+*.pub
+*.env
+.env.*
+*.tmp
+cron.d/*
+crontab*
+env/
+vent/
+.env/
+ssh_config
+
