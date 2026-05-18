@@ -18,7 +18,7 @@ echo $CONFIRMATION >> $LOG
 
 if [ $CONFIRMATION == 'y' ]; then
 	echo 'Starting restoration...' | tee -a $LOG
-	rsync --dry-run -avz $REMOTE_USER@$REMOTE_HOST:/home/server/backups/$RESTORE_DATE /$(whoami)/home/ |& tee -a $LOG
+	rsync -avz $REMOTE_USER@$REMOTE_HOST:/home/server/backups/$RESTORE_DATE /$(whoami)/home/ |& tee -a $LOG
 elif [ $CONFIRMATION == 'n' ]; then
 	echo 'Restoration cancelled' | tee -a $LOG
 	exit
